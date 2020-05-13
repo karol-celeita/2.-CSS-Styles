@@ -1,0 +1,127 @@
+/*https://workflowy.com/#/26f87a54ea2a*/
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*buena practica para no dañar la maquetacion*/
+
+.box1{
+	width: 400px;
+	height: 300px;
+	background-color: pink;
+	margin: 100px auto;
+/*	El borde esta adentro y cambia el tamaño de la caja, para
+	solucionarlo usamos box-sizing: */
+
+	/* Este es el shorthand Supremo (Parametros: ancho, estilo , color)*/
+	border: 20px dotted white; 
+}
+
+.border{
+	width: 400px;
+	height: 300px;
+	background-color: red;
+	margin: 100px auto;
+
+	/*funciona igual que con las manecillas del reloj
+	Si quito alguno se toma el opuesto */
+
+	border-style: solid dotted dashed double;
+	border-width: 20px;
+
+/*	Se pueden usar las tres propiedades:
+	border-top-style: solid ;
+  	border-right-with: 150px ;
+  	border-bottom-color:transparent;*/
+
+}
+
+/*Shorthand */
+	.borders{
+		width: 400px;
+		height: 300px;
+		background-color: red;
+		margin: 100px auto;
+		border-style: solid dashed;
+		border-color: blue yellow green orange;
+		border-width: 50px 40px 100px 20px;
+
+	}
+
+	.triangle{
+		width: 300px;
+		height: 300px;
+		background-color: red;
+		margin: 100px auto;
+		border-style: solid ;
+		border-color: blue yellow green orange;
+		border-width: 150px;
+	}
+
+	.box {
+	  width: 300px;
+	  height: 300px;
+	  color: green;
+	  background-color: transparent;
+	  margin: 100px auto;
+
+/* Tringulo: forma 1*/
+
+	/*  border-top: 150px solid blue;
+	  border-right: 150px solid transparent;
+	  border-bottom: 150px solid transparent;
+	  border-left: 150px solid transparent; */
+
+	/*Triangulo forma facil*/
+
+	  border: 150px solid;
+	  border-color: blue transparent transparent;
+
+	  /*Para redondear*/
+	  border-radius: 50%;
+}
+.youtube{
+	width: 250px;
+	height: 150px;
+	background: hsl(10, 90%, 50%);
+	margin: 100px auto;
+
+/*	border-top-left-radius: 60px 120px; 
+	border-top-right-radius:  60px 120px;
+	border-bottom-left-radius:  60px 120px;
+	border-bottom-right-radius:  60px 120px*/
+
+/*	Shortand para lo anterior:
+	border-radius: x x x x/ y y y y;*/
+
+	border-radius: 60px/120px;
+}
+
+/*OUTLINE, es un borde que se esta fuera de la caja*/
+
+/*BOX-SHADOW: h-offset:medida vetical; v-offset: medida horizontal; 
+blur:difuminado; spread:expansion
+color : color | inset: Que la sombra se dibuje por dentro*/
+
+.shadow{
+	  width: 200px;
+	  height: 200px;
+	  background-color:green;
+	  margin: 100px auto;
+	/*  box-shadow: 100px 100px 10px 50px;
+	  color: yellow;*/
+
+	  box-shadow: 0 0 0 10px blue,
+	  			0 0 0 20px red,
+	  			0 0 0 30px yellow;
+
+}
+
+.inset{
+	  width: 200px;
+	  height: 200px;
+	  background-color:green;
+	  margin: 100px auto;
+
+	  box-shadow:-6px -6px 40px 0 rgba(0,0,0,.5) inset;
+}

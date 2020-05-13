@@ -1,0 +1,122 @@
+/*Layout: Geometría de los elementos que define como, 
+con que tamaño, con qué separación respecto a los elementos adyacentes 
+y en qué posición se van a dibujar en la pantalla.
+https://workflowy.com/#/78bc9f9deb87
+*/
+
+/*ELEMENTOS EN LINEA Y BLOQUE*/
+/*Los elementos inline no tienen alto */
+
+	body {font-size: 2.5em}
+
+	h1 {
+	  background: yellow;
+	  height: 200px;
+	  width: 200px;
+	  display: inline; /*Convierte el elemento en linea*/
+	}
+
+	p {
+		/* display: block: Convierte el elemento en bloque*/
+	  display: inline;
+	  background: pink;
+	}
+
+	span {
+	  background: yellow;
+	  width: 200px;
+	  height: 100px;
+	  display: inline-block; /*Combina el elemento linea y bloque sin alterar los demas elementos*/
+	}
+
+
+/*BOX MODEL
+- Caja de contenido
+- Padding box: Separacion entre el contenido y el borde
+- Border:;
+- Margen: separa el elemento del navegador */
+
+		
+	.box {
+	  background: yellow;
+	  background-clip: content-box;
+	  
+	  /* Box model */
+	  width:  500px; /*content box- caja amarilla*/
+	  height: 300px; /*content box- caja amarilla*/
+	  padding: 50px; /* caja blanca*/
+	  border:  30px solid black;  /*caja negra*/
+	  margin: 100px; 
+	  
+	  /* Box sizing: Indica al navegador el tamaño de la caja,
+	   si no se pone el navegador suma las cantidades de ariiba (por cada lado) */
+	  box-sizing: border-box; /*Practica recomendada para todos los elementos*/
+	}
+
+/*MARGIN: top, left, botom, right*/
+
+	[class^="box-"] {
+	  background: green;
+	  padding: 50px;
+	  width: 50%;
+	}
+
+	.box-1 {
+	  margin-left: 50px;
+	}
+
+	.container {
+	  width: 600px;
+	  background: lime;
+	  margin-left: auto;
+	  margin-right: auto;
+	}
+
+	.item {
+	  margin-left: -20px; /*Tambien se puede: 50px 20 px 100px 25px si falta uno se completa con su opuesto*/
+	  margin-right: -20px;
+	  border: 1px solid red;
+	}
+
+/*COLAPSADO DE MARGENES VERTICALES*/
+	/*https://codepen.io/AlvaroFelipe/pen/GxpQpp*/
+	/*los margenes verticales tienden a juntarse, gana el mayor
+	La buena practica es usarl la misma direccion de margen : bottom */
+
+	body {
+	  margin: 0;
+	}
+
+	[class^="article"] {
+	  background: pink;
+	  margin-bottom: 50px;
+	}
+
+	/*PADDING: top, left, botom, right*/
+	/*shorthand (todo en una linea)= padding: 50px 20 px 100px 25px*/
+
+	/* [class^="article"] {
+	  background: yellow;
+	  padding: 10%;
+	  width: 800px;
+	  margin-left: auto;
+	  margin-right: auto;
+
+	  Si es tamaño fijo: se usa width, height con pixeles
+	  Si es porcentaje: Heredan del papa, la altura hereda del ancho
+	} */
+
+
+	.video {
+	  background: yellow;
+	  padding-bottom: 56.25%; /*para videos responsive*/
+	}
+
+
+/*DIMENSIONES*/
+
+	/*vh = 1% del alto en la pantalla
+	vw= 1% del ancho de la pantalla
+	min-height, vuelve automatico la altura, los automaticos no heredan altura*/
+
+	

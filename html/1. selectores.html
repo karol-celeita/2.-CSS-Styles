@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS:Selectores</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="witdh=device-witdh, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+
+	<!--Otra forma , no muy recomendable porque si se bloque uno daña al resto
+		<style type="text/css">
+			@import url('static/conceptos.css')
+		</style> -->
+
+	<link rel="stylesheet" type="text/css" href="../css/selectores.css">
+
+</head>
+<body>
+
+	<h1>CSS: Selectores</h1>
+	<p>Este es un parrafo para mostrar selectores de etiqueta</p>
+
+	<p class="title">Este es un selector de clase</p>
+	<p class="parrafo">Estos son selectores agrupados</p>
+
+<!-- Selectores Hijo directo -->
+	<ul>
+		<li class="item">Item1</li>
+		<li class="item">Item2</li>
+		<li class="item">Item3</li>
+		<li class="item">Item4</li>
+		<li class="item">Item5
+			<ul>
+				<li>item a</li>
+				<li>item b</li>
+			</ul>
+		</li>
+
+	</ul>
+
+<!-- Selectores Hermano siguiente -->
+	<h2 class="title-1">Titulo</h2>
+	<p class="subtitle">Subtitulo de h2</p>
+
+	<h3 class="title-2">Titulo</h3>
+	<p class="subtitle">Subtitulo de h3</p>
+
+<!-- Selectores Hermanos siguientes -->
+	<p class="hermano-mayor">Hello</p>
+	<p class="hermano">Hi</p>
+	<p>Hello</p>
+	<p class="hermano">Hello</p>
+	<p>Hello</p>
+	<p class="hermano">Hello</p>
+	<p>Hello</p>
+
+	<input type="checkbox" name="" class="check">
+	<p class="enabled">Activado</p>
+	<p class="disabled">Desactivado</p>
+
+<!-- Selectores de atributos -->
+	<input type="email" name="">
+	<input type="submit" value="Enviar" name="">
+	<input type="date" required name="">
+
+<!-- Selectores de atributos que empiezan con... -->
+	<a href="/contacto.html">Contacto</a>
+	<a href="/cursos">Cursos</a>
+	<a href="https://youtube.com">Youtube</a>
+
+<!-- Selectores de atributos que terminan con... -->
+	<a href="#" class="button button-cta">Dale click</a>
+	<a href="#" class="button button-alert">Cancelar cuenta</a>
+
+</body>
+</html>

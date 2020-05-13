@@ -1,0 +1,168 @@
+/*CSS: Style Sheet Cascade*/
+/*Es un lenguaje de presentacion, describe como se representará en pantalla es interpretado, 
+necesita de un software que lo ejecute en tiempo real es decir el navegador*/
+
+/*HISTORIA
+- Se creo en 1994, su version actual es CSS3 desde el 2011, antes tambien existio el JSSS
+- No existio una version formal de CSS3, es en realidad CSS2.1, el cual se dividio en módulos pata trabjar por su cuenta.
+- W3C crea unh snapshot del estado actual de CSS
+
+https://workflowy.com/#/2bab4a8552b0
+*/
+
+/*Sintaxis: 
+- Selector es la etiqueta html
+- Bloque: Contiene las declaraciones
+- Propiedades: se les asigna un valor y se convierten en declaración
+- At-rule: reglas que comienzan con @
+http://apps.workflower.fi/vocabs/css/en*/
+
+/*Variables CSS*/
+
+:root {
+	--color: pink;
+	--color-title:green;
+	--color-subtitle:purple;
+}
+
+h1{
+	
+	text-align:center;
+}
+
+body {
+  font-size: 1.5em;
+}
+
+/*SELECTORES: https://workflowy.com/#/55b79309c21d
+	- Los niveles ayudan a ver en que etapa esta el módulo W3C
+	- El navegador trae sus propios estilos: "user agent"
+	- https://necolas.github.io/normalize.css/ Normaliza los estilos 
+	- Se pueden usar emojis como clases: https://apps.timwhitlock.info/emoji/tables/unicode#block-6b-additional-transport-and-map-symbols
+	- Se considera una mala practica usar ids, son mejores para Javascript
+	- los tags html en css son insensitive pero los atributos son sensitive
+*/
+
+/*Selectores sencillos*/
+	/*p {
+		text-align:center;
+	}
+	*/
+
+/*Selectores de clase*/
+
+	.title{
+		background-color: var(--color);
+		text-align:center;
+	}
+/*Selectores Universales ------> *{}  */
+
+/*Selectores Agrupados */
+	.title, .parrafo{
+		color: red;
+	}
+
+/*Selectores Descendientes: Todos los emelmetos que se encuentren en la clase y pretenezcan a su vez a su clase padre directa o indirectamente
+, tener presente el espacio*/
+	.list .tag{
+		color: blue;
+	}
+
+/*Selectores Hijo Directo: Todos los elementos hijos unicamente */
+
+	li > ul {
+		display: none;
+	}
+
+	li:hover ul{
+		display:block;
+	}
+
+/*Selectores hermano siguiente: (unico) Elemento que esta justo después de otro */
+
+	.subtitle{
+		font-size: 1.5em;
+		margin: 0;
+	}
+
+	.title-1{
+		color: var(--color-title)
+	}
+
+	.title-2{
+		color: var(--color-title)
+	}
+	 /*Para que los subtitulos de cada titulo tengan el mismo color de sus padres:*/
+	 .title-1 + .subtitle{
+	 	color:var(--color-subtitle)
+	 }
+
+	  .title-2 + .subtitle{
+	  	color:var(--color-subtitle)
+	  }
+
+/*Selector hermanos siguientes (varios elementos)*/
+	.hermano-mayor ~ .hermano{
+		background-color: yellow; 
+	}
+
+	/*Ejemplo 2*/
+
+	.enabled{
+		display: none;
+	}
+
+	.check:checked ~ .enabled{
+		display: block;
+	}
+
+	.check:checked ~ .disabled{
+		display: none;
+	}
+
+
+/*Selectores de atributos*/
+
+	[type="email"]{
+		border:1px solid blue;
+	}
+
+	[type="submit"]{
+		background-color: gray;
+		color: white;
+		border:none;
+	}
+
+	[required]{
+		border:2px solid red;
+		margin: .5em;,
+	}
+
+/*Selectores de atributos que empiezan con...*/
+	[href^="/"]{
+		color: red;
+	}
+
+/*Selectores de atributos que termina con...*/
+
+	[href$=".pdf"]{
+		color:green;
+	}
+
+/*Selectores de atributos que terminan con..*/
+
+[class*="button-"] {   
+  display: inline-block;
+  margin: 1em;
+  padding: 1em 2em;
+  text-decoration: none;
+  color: white;
+}
+
+.button-cta{
+	background-color: orange;
+}
+
+.button-alert {
+  background: red;
+}

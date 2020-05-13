@@ -1,0 +1,81 @@
+/*rem-> valor relativo a html
+em-> valor que depende del contexto, 
+	es decir la etiqueta mas cercana que tenga un font-size, abuelo, padre etc*/
+
+
+.body{
+	font-size: 4em;
+	text-align: center;
+}
+
+/*FUENTES GENERICAS*/
+.font{
+	font-family: monospace; /*Los glifos tienen la misma anchura*/
+}
+.cursive{
+	font-family: cursive; /*Pone la mmisma por el Sistema Operativo*/
+}
+.serif{
+	font-family: serif; /*Tienen serifas en sus terminaciones*/
+}
+.sans{
+	font-family: sans-serif; /*Letra estandar*/
+}
+
+/*FUENTAS DEFINIDAS*/
+
+.font1{
+	/*Se ponen varias fuentas en caso de que una no funcione*/
+	/*Si la tipografia tiene espacio hay que usar comillas*/
+	font-family: Verdana, Arial, sans-serif;
+}
+
+.weight{
+	font-weight: bold;
+/*	normal | bold | lighter | bolder
+	100 | 200 | 300 ... | 900*/
+}
+.style{
+	font-style: italic;
+}
+.variant{
+	font-variant: small-caps;
+}
+
+/*SHORTHAND DE FONT*/
+.shorthand{
+	font: bold 4em/1.5 verdana;
+	text-align: center;
+}
+
+/*@font face, se utiliza para usar un tipo de fuente personalizada
+debe estar en el formato WOOF (se debe instalar)*/
+
+/*@font-face {
+  font-family: 'balsamiq sans', cursive;
+  font-weight: 400 ;
+  font-style: normal;
+  src: local('roboto') url(https://fonts.googleapis.com/css2?family=balsamiq+sans:wght@400;700&display=swap) format(woff2)  /* ruta de la fuente, ruta de repuesto y formato*/
+
+.google{
+	font:4em  'Sacramento', cursive;
+	text-align: center;
+}
+
+@font-face {
+    font-family: 'action_manbold_italic';
+    src: url('web_fonts/actionman/Action_Man_Bold_Italic-webfont.eot');
+    src: url('web_fonts/actionman/Action_Man_Bold_Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('web_fonts/actionman/Action_Man_Bold_Italic-webfont.woff2') format('woff2'),
+         url('web_fonts/actionman/Action_Man_Bold_Italic-webfont.woff') format('woff'),
+         url('web_fonts/actionman/Action_Man_Bold_Italic-webfont.ttf') format('truetype'),
+         url('web_fonts/actionman/Action_Man_Bold_Italic-webfont.svg#action_manbold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*Proveedores de fuentes
+Google Fonts
+FontSquirrel
+Typekit*/

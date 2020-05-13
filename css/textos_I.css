@@ -1,0 +1,127 @@
+/*EM*/
+/* El tamaño relativo al contexto: 
+h1 es hijo de body mientras que span es hijo de h1;
+para h1: 1 em son 16px= 4*16px 
+Para spam: 1 em será de 64px */
+
+.em {
+	font-size: 2em; 
+	text-align: center;
+}
+
+.em span{
+	font-size: 2em;
+	
+}
+/*https://workflowy.com/#/e54e88fecbc4*/
+/*REM*/
+/*Cambia de acuerdo a la raiz, es decir siempre sera la misma medida predefinida*/
+/*:root{
+	font-size: 10px;
+}*/
+
+.rem {
+	font-size: 2rem; 
+	text-align: center;
+}
+
+.rem span{
+	font-size: 2rem;
+}
+
+.direction{
+	direction: ltr;   /*Para lenguajes que escriben de derecha a izquierda(rtl o ltr)*/
+	text-indent: 2em; /*Indentacion de la primera línea */
+	text-align: start;  /*Alinea a el texto (left, right, center, start, end o justify) Mala practica:Justificar*/
+	text-align-last: center; /*Alinea la ultima line solamente*/
+	line-height: 1.5em; /*Hace separacion entre cada linea del parrafo*/
+}
+
+.line{
+width: 150px;
+margin: 100px auto;
+height: 150px;
+background:pink;
+text-align: center;
+line-height: 150px;
+
+/*Si el texto solo tiene una line se puede centrar con line-height: Recomnedable usar em*/
+}
+
+.letter{
+/*
+	vertical-align: bottom, baseline, left; Alinea verticalmente*/
+	letter-spacing:1em; /*Valores pequeños*/
+	text-align: center;
+}
+	
+.word{
+/*
+	vertical-align: bottom, baseline, left; Alinea verticalmente*/
+	word-spacing:1.5em; /*Valores pequeños*/
+	text-align: center;
+}
+
+.enlace{
+	text-decoration: none;
+	text-decoration-line:overline underline;
+	/*underline | line-through | overline*/
+	text-decoration-color:red;
+	text-decoration-style:solid;
+	/*solid | dashed | dotted | double*/
+
+}
+h2{
+	text-align: center;
+	text-shadow: 10em 10em 0 red;
+}
+
+h2 {   /*sombras*/
+  color: pink;
+  text-align: center;
+  font-size: 4em;
+  text-shadow: 1px 1px 0 red,
+               -1px -1px 10px red;
+}
+
+text{
+	stroke: red;
+	stroke-width: 1px;
+	color: pink;	
+}
+
+/*white-space: 
+normal
+pre: conserva espacios sin saltos de linea;
+nowrap :no salta de linea
+pre-wrap: salta de linea y conserva espacios
+pre-line: salta de línea y no conserva espacios*/
+
+/*DESBORDAMIENTO*/
+.body{
+	font-size: 2.5em;
+	/*Esto provocara un desbordamiento(se sale de la caja)*/
+}
+.space{
+	width: 130px;
+	margin: 2em auto;
+	border: 2px solid black;
+
+	/*si se quitan hay desbordamiento*/
+	overflow: hidden;
+	text-overflow: ellipsis;
+	/*word-break: break-all;*/
+
+/*word-break: normal | break-all | keep-all
+word-wrap: normal | break-word
+text-overflow :clip | ellipsis !Debe ser comnado con overflow¡*/
+}
+
+.vertical{
+	writing-mode: vertical-lr;
+	text-orientation: upright;
+	margin: 2em auto;
+}
+
+/*TRANSFORM
+text-transform: Capitalize|uppercase|Lowercase | none*/

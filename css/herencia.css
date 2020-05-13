@@ -1,0 +1,99 @@
+/*Arquitectura CSS:
+https://workflowy.com/#/72685dae30be
+Forma en que organizamos los CSS en un proyecto: SMACSS; OOCSS; ITCSS*/
+
+/*Especificidad: Que estilo o regla es la mas especifica a nivel de selectores
+esto hace que el navegador escoga que etiqueta usar (por eso hay estilo que no funcionan)
+Calculadora de espeficidad
+https://specificity.keegan.st/
+
+Grafico de especificidad: https://jonassebastianohlsson.com/specificity-graph/
+Debe se constante y sin picos para que no hayan conflictos 
+ 
+La arquitectura encargada de esto es ITCSS
+https://speakerdeck.com/dafed/managing-css-projects-with-itcss?slide=57
+*/
+
+body {
+  font-size: 3em;
+}
+
+.big {
+  font-size: 2em;
+}
+
+.normal {
+  font-size: 1em;
+}
+
+.small {
+  font-size: .75em;
+}
+
+.post-description {
+  color: red;
+}
+
+.product-description {
+  color: black;
+}
+
+/*El navegador toma el ultimo bloque si tiene la misma especificidad
+En lo posible, no usar la etiqueta !important
+Ejemplo: El nav, toma el de mayos especifidad y etiqueta important,
+ si estan en archivos distintos sera dificil de encontrar*/
+
+/*.post p.post-description{
+	color:purple !important;
+}
+
+p.post-description{
+	color: red !important; ¿Porque pusiste esa etiqueta?,
+	 esto te ayudara a solucionar el error
+}
+p{
+	color: green !important;
+}
+
+Orden de eleccion:
+-!important
+-Especificidad
+-Cascada*/
+
+/*HERENCIA*/
+
+body {
+  font-size: 3em;
+  color: green;
+}
+
+/* initial : Resetea su a su propiedad inicial*/
+/* inherit */
+
+span {
+  font-size: .5em;
+}
+
+p {
+  color: blue;
+}
+
+a {
+  color: inherit;
+}
+
+ul {
+  color: red;
+}
+
+li {
+  color: initial;
+}
+
+ul span {
+  font-size: inherit;
+}
+
+.last {
+  color: inherit;
+}
