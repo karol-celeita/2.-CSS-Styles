@@ -1,0 +1,142 @@
+body{
+	font-size: 1.5em;
+
+
+}
+
+h1{
+	background: steelblue;
+	margin: 0;
+	padding: 25px;
+	color:white;
+	font-size: 1.5em;
+	background-attachment: fixed;
+	text-align: center;
+	font-family: sans-serif;
+}
+
+
+code{
+ color: red;
+ font-weight: bold;
+ font-size: 1.3em;
+
+
+}
+
+div{
+	padding:30px;
+	margin: 15px 200px ;
+}
+
+
+span{
+	display: list-item;
+
+	margin:20px;
+}
+
+/*ESTILOS*/
+.style1{
+	list-style: square; 
+	/*circle , none, decimal-leading-zero, lower-alpha , upper-alpha
+	square, disc etc*/
+}
+
+/*IMAGEN*/
+/*No usar la propiedad list-image es mala practica*/
+
+.image{
+	list-style: none;
+	
+}
+.image li::before{
+	content: "";
+	background-image: url(https://icons.iconarchive.com/icons/paomedia/small-n-flat/256/sign-check-icon.png);
+	background-size: contain;
+	display: inline-block;
+	width: .8em;
+	height: .8em;
+	margin-right: .25em;
+}
+
+/*POSICION*/
+
+.position{
+	border: 1px solid black;
+	padding: 10px;
+	list-style-position: inside; /*Si lo quito las viñetas quedan por fuera*/
+}
+
+.position li{
+	border: 1px solid black;
+	margin-bottom: 10px;
+}
+
+/*Para dar diseño a las viñetas se usan los contadores*/
+/*CONTADORES*/
+
+.chapters{
+		counter-reset: chapters;
+		padding: 0;
+		margin: 0;
+		color: gray;
+}
+
+.chapter{
+	counter-increment: chapter;
+}
+
+.chapter::before{
+	content: counter(chapter) '.  '; /*Se usa para titulos*/
+	color: black;
+
+}
+
+/*CONTADORES LISTAS  ANIDADAS*/
+
+.anidadas{
+	padding: 0;
+	margin: 0;
+	color: gray;
+}
+
+.listas{
+	counter-reset: list;
+}
+.listas li{
+	counter-increment: list;
+	list-style: none;
+}
+
+.listas li::before{
+	content: counters(list, '.') '. '; /*Se usa para listas se pone la " s"*/
+	color: black;
+}
+
+/*EJERCICIO TEMARIO ANIDADO SIN LISTAS*/
+
+.temary{
+	counter-reset: classes;
+	padding: 0;
+	margin: 0;
+}
+
+.class{
+	counter-increment: classes;
+	counter-reset: topic;
+
+}
+
+.class-title::before{
+	content: counter(classes) '. ';
+}
+
+
+.class-topic{
+	counter-increment:(topic);
+	
+}
+.class-topic::before{
+	 content: counter(topic) '. ';
+}

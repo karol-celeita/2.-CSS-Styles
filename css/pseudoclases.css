@@ -1,0 +1,204 @@
+/*Son selectores especiales*/
+/*:root tiene el mismo valor que html pero este tiene mas especificidad*/
+/*Pseudoclases usan un juego de : , pseudoelementos ::*/
+
+:root {
+      --first-color: #007BDF;
+      --first-color-alt: #006DC6;
+      --second-color: #00CBFF;
+      --second-color-alt: #00BFF0;
+      --third-color: #FF3C32;
+      --third-color-rgba: rgba(255, 60, 50, .5);
+      --third-color-alt: #FF2419;
+      --accent-color: #FBA905;
+      --accent-color-alt: #fff;
+      --dark-color: #282D31;
+      --dark-color-alt: #141618;
+      --border-color: #DFE0E0;
+      --text-color: #53575A;
+      --body-bg: #FAFDFF;
+      --font-main: sans-serif;
+      --font-size: 16px;
+      --line-height: 1.6;
+      --header-height: 8rem;
+      --max-width: 1200px;
+      --n: 2;
+      /* background-color: springgreen; */
+    }
+
+    html {
+      /* background-color: steelblue; */
+      box-sizing: border-box;
+      font-family: var(--font-main);
+      font-size: var(--font-size);
+      line-height: var(--line-height);
+      background-color: var(--body-bg);
+      color: var(--text-color);
+    }
+
+    *,
+    *::after,
+    *::before {
+      box-sizing: inherit; /*(Hereda de la clase html que es la mas cercana con esa propiedad)*/
+      padding: 0;
+      margin: 0;
+    }
+
+    a {
+      color: var(--second-color-alt);
+      transition: color .3s ease-in;
+    }
+
+    a:hover {
+      color: var(--first-color-alt);
+    }
+
+    li {
+      margin-left: 2rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+/*    EMPTY : Aplica estilos a las etiquetas vacias */
+    p:empty {
+      margin-bottom: 0;
+      display: none;
+    }
+
+
+
+    .Header {
+      padding: 1rem;
+      position: fixed;
+      width: 100%;
+      height: var(--header-height);
+      text-align: center;
+      background-color: var(--first-color);
+      color: var(--border-color);
+      font-size: 1.25rem;
+    }
+
+    .Main {
+      padding: calc(var(--header-height) + 1rem) 1rem 0;
+      margin: 0 auto;
+      max-width: var(--max-width);
+    }
+
+    .Main h2 {
+      color: var(--third-color);
+    }
+
+    .Main article {
+      margin-bottom: 1rem;
+      padding: 1rem;
+      background-color: white;
+      color: var(--dark-color);
+      transition: all .5s ease-out;
+    }
+
+    .Main article:hover {
+      background-color: var(--accent-color);
+      color: var(--dark-color);
+    }
+
+    .Main article:active {
+      background-color: var(--second-color);
+      color: var(--dark-color);
+    }
+
+    /*NTH_CHILD: Hay que declararles su propio hover y active */
+
+ /*   Permite expresiones:
+    3 = El tercer elemento
+    3n= cada tres elementos
+    Palabras Reservadas: odd (pares)
+    					even(impares)*/
+
+    .Main article:nth-child(even) {
+      background-color: var(--dark-color-alt);
+       color: white;
+    }
+
+    .Main article:nth-child(even):hover {
+      background-color: var(--accent-color);
+      color: var(--dark-color-alt);
+    }
+
+    .Main article:nth-child(even):active {
+      background-color: var(--second-color-alt);
+      color: var(--dark-color-alt);
+    }
+
+
+
+
+
+    .Main article:first-child {
+      font-size: 1.25rem;
+    }
+
+    .Main article:last-child {
+      font-size: .75rem;
+    }
+
+    .Modal {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: var(--third-color-rgba);
+      /* display: flex; */
+      justify-content: center;
+      align-items: center;
+      display: none;
+    }
+
+    /*TARGET*/
+
+    .Modal:target {
+      display: flex;
+    }
+
+    .Modal-box {
+      width: 50%;
+      height: 50vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--accent-color);
+    }
+
+
+    /*NOT*/
+
+    .Modal form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .Modal input:not([type="submit"]) {
+      margin-bottom: .5rem;
+      padding: .5rem;
+      border: thin solid var(--second-color);
+      background-color: var(--body-bg);
+      color: var(--first-color);
+    }
+
+    .Modal input[type="submit"] {
+      width: 50%;
+      margin: 0 auto .5rem;
+      padding: .5rem .25rem;
+      border: 0;
+      border-radius: .25rem;
+      background-color: var(--first-color);
+      color: var(--body-bg);
+      transition: all .3s ease-in;
+    }
+
+    .Modal input[type="submit"]:hover {
+      background-color: var(--dark-color);
+    }
