@@ -1,0 +1,119 @@
+body{
+	font-size: 1.5em;
+
+	
+}
+
+h1{
+	background: steelblue;
+	margin: 0;
+	padding: 25px;
+	color:white;
+	font-size: 1.5em;
+	background-attachment: fixed;
+	text-align: center;
+	font-family: sans-serif;
+}
+
+code{
+ color: red;
+ font-weight: bold;
+ font-size: 1.3em;
+
+}
+
+article{
+	padding:30px;
+	margin: 15px 200px ;
+}
+
+.current{
+	color: currentColor;
+}
+.rgb{
+	background-color: rgb(0,100,0);
+}
+.rgba {
+	background-color: rgba(0,255,125,1);
+}
+
+.hexa {
+	background-color: #FFFF00;
+}
+
+.hsl1{
+	background-color: hsl(0,50%,50%);
+}
+.hsl2{
+	background-color: hsl(90,50%,50%);
+
+}
+.hsl3{
+	background-color: hsl(180,50%,50%);
+}
+.hsl4{
+	background-color: hsl(270,50%,50%);
+}	
+
+.lineal{
+	background: linear-gradient(yellow,red); /*Se pueden añadir mas colores*/ 
+								/*hsl(0,100%,510%)*/
+	/*en el body no hay altura, y por defecto es repeat*/
+}
+
+.stop{
+	background:linear-gradient(blue 10% ,lime); 
+}
+
+/*0 es botton to top (se voltea)*/
+/*Se usan grados 90deg*/
+/*Tambien se puede hacer con direcciones: to top , to botton, to top right (esquinas)*/
+.angulo{
+	background: linear-gradient(to top right, lime ,yellow, red); 
+	padding: 40px;
+}
+
+/*repeating-linear-gradient( lime 3px, red 3px); */
+.radial{
+	background: radial-gradient(circle, steelblue,cyan ,yellow, green); 
+	padding: 40px; 
+	height: 400px;
+}
+/*Se pueden usar keywords:
+Para el lado mas cercano closest-side*/
+/*background: radial-gradient(closest-side, circle, steelblue,cyan ,yellow, green); */
+/*Tambien estan: 
+farthest-side: lado mas lejano
+closest-corner :Esquina mas cercana
+farthest-corner : Esquina mas lejana*/
+.p{
+background-image: repeating-radial-gradient(circle, yellow 0, yellow 20px, red 20px, red 40px);
+padding: 40px; 
+width: 400px;
+height: 400px;
+
+}
+
+/*EJERCICIO*/
+
+.body{
+	min-height: 100vh;
+	display: grid;
+}
+
+.box{
+	width: 600px;
+	height: 600px;
+	border-radius: 50%;
+
+	/*El orden de las capas importa*/
+	background: 
+			
+				radial-gradient( circle at 50% 25%, black 8%,transparent 8%),	/*Para el puntito*/
+				radial-gradient( closest-side circle at 50% 25%, white 100% ,transparent 50%), /*Para la curva*/
+
+				radial-gradient(closest-side  circle at 50% 75%, white 25%,transparent 25%),/*Para el puntito*/
+				radial-gradient( closest-side circle at 50% 75%, black 100% ,transparent 50%), /*Para la curva*/
+				linear-gradient(to right, white 50%,black 50%); /*Para el circulo tota*/
+	box-shadow: 0 0 0 2px;
+}

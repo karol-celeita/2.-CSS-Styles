@@ -1,0 +1,153 @@
+body{
+	font-size: 1.5em;
+}
+
+h1{
+	background: steelblue;
+	margin: 0;
+	padding: 25px;
+	color:white;
+	font-size: 1.5em;
+	background-attachment: fixed;
+	text-align: center;
+	font-family: sans-serif;
+}
+
+code{
+ color: red;
+ font-weight: bold;
+ font-size: 1.3em;
+
+}
+
+article{
+	padding:30px;
+	margin: 15px 200px ;
+}
+
+.p1{
+	color: red;
+	float:left;
+	width: 50%;
+}
+.p2{
+	color: green;
+	float:right;
+	width: 50%;
+}
+.p3{
+	color: blue;
+}
+
+.off{
+	position: relative;
+	top: 70px;
+	border-top: 1px solid black;
+}
+/*RELATIVE*/
+
+.rel1{
+	color: green;
+	position: relative;
+	top: 6em;
+}
+
+.rel2{
+	color: blue;
+	position: relative;
+	/*top: -4.5em;*/
+}
+/*ABOSLUTE*/
+
+h3{
+	background-color: yellow;
+	position: absolute;
+
+}
+/*Es comun ver papa:relative, hijo : absolute*/
+.box{
+	position:relative;
+	width: 500px;
+	height: 500px;
+	background-color: steelblue;
+}
+
+.box span{
+	position:absolute;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 50px;
+	border: 1px solid black;
+	text-align:center;
+	line-height: 50px;
+}
+
+/*EJERCICIO MENU DESPEGABLE*/
+
+.menu{
+	list-style: none;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+	display:flex;
+	background-color: #333;
+}
+.submenu{
+
+	top: 100%;
+	display: none;
+	position: absolute;
+	
+}
+.menu-item{
+	position: relative;
+
+}
+.menu-item:hover{
+	background-color: rgba(0,0,0,.5);
+}
+
+.menu-item:hover .submenu{
+	display: block;
+}
+
+.menu-link{
+	text-decoration: none;
+	color: #ddd;
+	display: block;
+	padding: .5em 1em;
+}
+
+*, *::before, *::after{
+	box-sizing: border-box;
+}
+
+.card{
+	width: 600px;
+	position: relative;
+	top:100px;
+	margin: 25px;
+
+}
+
+.card-img{
+	width: 100%;
+	display: block;
+}
+
+.card-title{
+	position: absolute;
+	bottom: 0;
+	background: rgba(0,0,0,.75);
+	color: #fff;
+	width: 100%;
+/*	height: 100%;*/
+	margin: 0;
+	padding: .5em;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}

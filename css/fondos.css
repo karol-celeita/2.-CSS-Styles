@@ -8,18 +8,18 @@
 
 .image{
 	height: 300px;
-	background-image:url(https://images.pexels.com/photos/2146042/pexels-photo-2146042.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+	background-image:url(../img/nina.jpeg);
 }
 
 .repeat{
 	height: 300px;
-	background-image:url(https://images.pexels.com/photos/4040549/pexels-photo-4040549.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+	background-image:url(../img/huevo.jpeg);
 	background-repeat: no-repeat;
 	background-color: gray;	
 }	
 .clip{ /*que parte de la caja esta bubierta por el fondo*/
 	height: 300px;
-	background-image:url(https://images.pexels.com/photos/4033022/pexels-photo-4033022.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+	background-image:url(../img/sopa.jpeg);
 	background-clip: content-box; /*padding-box, border-box*/
 	padding: 50px;
 	border: 2px solid black;
@@ -34,18 +34,18 @@
 	/*cover : expande la imagen al alcho;
 	auto: deja la imagen como esta;*/
 
-	background-image:url(https://images.pexels.com/photos/163046/welcome-to-our-home-welcome-tablet-an-array-of-163046.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+	background-image:url(../img/welcome.jpeg);
 }
 .position{
 	height: 300px;
-	background-image: url(https://upload.wikimedia.org/wikipedia/en/6/6b/Hello_Web_Series_%28Wordmark%29_Logo.png);
+	background-image: url(../img/hello.png);
 	background-size: 50%;
 	background-repeat: no-repeat;
 	background-position:center ; /* 250px 10px, center right , center top, center left*/
 }
 .attachment{ /*como se dibuja el fondo de acuerdo al viewport*/
 	height: 300px;
-	background-image: url(https://cdn.wallpapersafari.com/26/85/YZaLMQ.jpg);
+	background-image: url(../img/tigre.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -53,8 +53,8 @@
 
 .multiple{
  	height:300px;
- 	background-image:url(https://cdn140.picsart.com/284442890042211.png?type=webp&to=min&r=640),
- 	url(https://images.pexels.com/photos/2909067/pexels-photo-2909067.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+ 	background-image:url(../img/letra.webp),
+ 	url(../img/pasto.jpeg);
  	background-size: 25%;
 }
 

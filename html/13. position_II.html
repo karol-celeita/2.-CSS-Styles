@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../css/position_II.css">
+</head>
+<body>
+
+	<h1>Posición II</h1>
+	<article>
+		<code>position: fixed</code>
+		<ul>
+			<li>fixed: relativo al viewport</li>
+			<li>no se mueve con el scroll</li>
+			<li>Se ignora en el flujo</li>
+			<li>Sus dimensiones automáticas se restringen con el contenido</li>
+		</ul>
+
+		<header class="main-header">
+			<img class="logo" src="../img/logo.jpg">
+		</header>
+
+		<h2  class="fixed">Título</h2>
+		<p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+	
+	</article>
+
+	<article>
+		<code>position:sticky</code>
+		<p>Es una combinación entre el position relative y el fixed</p>
+
+		<h2  class="sticky">Ejemplo de sticky</h2>
+		<p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+		<p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nullaLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla   </p>
+		<p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+	</article>
+
+	<article>
+		<code>z-index</code>
+		<p>Hay tres ejes, x-index, y-index, z-index(profundidad). el de mayo z-index se muestra primero</p>
+		<ul>
+			<li>Para elementos posicionados</li>
+			<li>Para elementos transformados</li>
+			<li>Para elementos grid-items</li>
+			<li>Para elementos flex-items</li>
+			<li>Estructura correcta
+				<ul>
+					<li>--z-back  :-10; si queremos mandar algo atrás</li>
+					<li> --z-normal  :1; si un elemento se comporta anormal</li>
+					<li>--z-tooltip :10; para los tooltips encima de la imagen</li>
+					<li>--z-fixed   :100; Elemento encima de todos los demàs</li>
+					<li>--z-modal   :1000; Tapa todo , ejemplo modal</li>
+				</ul>
+			<li>Si la etiqueta padre tiene z-index, los hijos no podrán estar detrás nunca</li>
+			</li>
+		</ul>
+
+		<div class="dad">
+			<div class="son">1</div>
+			<div class="son">2</div>
+			<div class="son">3</div>
+			
+		</div>
+	</article>
+
+</body>
+</html>

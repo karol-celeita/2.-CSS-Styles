@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../css/position_I.css">
+</head>
+<body>
+ 	<h1>Posición I</h1>
+
+
+ <article>
+ 	<code>Flujo y Espacio Reservado</code>
+ 	<p>El flujo es como vienen organizados los elementos a medida que el navegador lee el código, cada etiqueta viene con un espacio reservado en el navegador </p>
+
+ 	<p class="p1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+ 	<p class="p2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+ 	<p class="p3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+ </article>
+
+ <article>
+ 	<code>position</code>
+ 	<p>Exiten los tipos: static ,relative, absolute, fixed,sticky</p>
+ </article>
+
+
+ <article>
+ 	<code>offset</code>
+ 	<p>Propiedad que mueve un elemento posicionado segun el borde indicado usando: top (Empuja desde el top del elemento hacia abajo), bottom(Hacia arriba), right(hacia izquierda), left(Hacia la derecha)</p>
+
+ 	<p class="off">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+ </article>
+
+ <article>
+ 	<code>position: relative</code>
+ 	<ul>
+ 		<li>Su referencia es su posición inicial</li>
+ 		<li>Aplicar position: relative a un elemento no modifica en nada su layout (geometría: margin, boxes, etc)
+ 		</li>
+ 		<li>Al moverlo con offset, el elemento se mueve pero deja guardado su espacio en blanco </li>
+ 	</ul>
+
+ 	<p class="rel1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+ 	<p class="rel2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+ </article>
+
+<article>
+ 	<code>position: absolute</code>
+ 	<ul>
+ 		<li>Pierde su posición en el flujo y no reserva su espacio</li>
+ 		<li>Si tenia dimensiones fijas se mantienen , si tenía dimensiones automáticas se ajustarán a su contenido</li>
+ 		<li>Su referencia es su acncestro posicionado más cercano, si no tiene lo hará al viewport o al body</li>
+ 	</ul>
+
+ 	<h3>Título</h3>
+ 	<div class="box">
+ 		<span>A</span>
+ 	</div>
+ </article>
+
+<article>
+	<code>Ejercicios:</code>
+ <nav class="nav">
+ 	<ul class="menu">
+ 		<li class="menu-item"><a class="menu-link" href="">Nosotros</a></li>
+ 		<li class="menu-item"><a class="menu-link" href="">Profesores</a></li>
+ 		<li class="menu-item"><a class="menu-link" href="">Cursos</a>
+ 			<ul class=" menu submenu">
+ 				<li class="menu-item"><a class="menu-link" href="">Programación</a></li>
+ 				<li class="menu-item"><a class="menu-link" href="">Diseño</a></li>
+ 				<li class="menu-item"><a class="menu-link" href="">Emprendimiento</a></li>
+ 			</ul>
+ 		</li>
+ 		<li class="menu-item"><a class="menu-link" href="">Blog</a></li>
+ 		<li class="menu-item"><a class="menu-link" href="">Suscríbete</a></li>
+
+ 	</ul>
+ </nav>
+</article>
+
+<article>
+	<div class="card">
+		<img class="card-img" src="../img/dalek.png">
+		<p class="card-title">Daleks- Doctor Who</p>
+	</div>
+
+</article>
+
+</body>
+</html>

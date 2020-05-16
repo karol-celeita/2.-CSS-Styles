@@ -1,0 +1,102 @@
+body{
+	font-size: 1.5em;
+	margin:0;
+/*En la practica real esto deberia ir en el body no en el h2*/
+	/*margin-top: 5rem;*/
+}
+
+h1{
+	background: steelblue;
+	margin: 0;
+	padding: 25px;
+	color:white;
+	text-align: center;
+	font-family: sans-serif;
+}
+
+code{
+ color: red;
+ font-weight: bold;
+ font-size: 1.3em;
+
+}
+
+article{
+	padding:30px;
+	margin: 15px 200px ;
+}
+
+.main-header{
+	/*border: 1px solid black;*/
+	position:fixed;
+	width: 3%;
+	left: 105px;
+	/*top:0;*/
+}
+
+.logo{
+	height: 2em;
+	display: block;
+	margin-top: .5em,
+	margin-left:.5em;
+}
+
+.fixed{
+	margin-top: 5rem;
+}
+
+/*:target {
+	Se puede utilizar así para que se aplique a todos los elementos link
+}*/
+
+/*STICKY*/
+.sticky{
+	position: sticky;
+	top: 10px;
+	background-color: #fff; 
+}
+
+/*Z-INDEX*/
+
+.dad{
+	width: 500px;
+	height: 500px;
+	background-color: hsla(60,100%,50%,.5);
+	position: relative;
+}
+
+.son{
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+	position: absolute;
+}
+
+.son:first-child{
+	background-color: hsla(300,100%,50%,.5);
+	z-index: 1;
+}
+
+.son:nth-child(2){
+	background-color: hsla(180,100%,50%);
+	top: 75px;
+	left: 75px;
+	z-index: 2;
+}
+
+.son:last-child{
+	background-color: hsla(100,100%,50%,.5);
+	top: 150px;
+	left: 150px;
+	z-index:1; /*Como tienen el mismo valor el navegador toma prevalencia de codigo*/
+	/*Es mejor usar valores de 10 en 10  en caso de poner un elemento en el medio*/
+}
+/* --z-back  :-10; si queremos mandar algo atrás
+ --z-normal  :1; si un elemento se comporta anormal
+ --z-tooltip :10; para los tooltips encima de la imagen
+ --z-fixed   :100; Elemento encima de todos los demàs
+ --z-modal   :1000; Tapa todo , ejemplo modal
+ */
+
+/* overflow: como se va a ver lo que se escapa*/
