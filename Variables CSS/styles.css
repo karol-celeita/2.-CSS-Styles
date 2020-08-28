@@ -1,0 +1,32 @@
+/* Variable: Espacio en memoria que almacena un valor, necesita un selector*/
+/* Tienen scope de DOM : root, html, body, article */
+
+/* Sass VS CSS*/
+/* Sass: Se pueden declarar sin selector*/
+/* Sass: Tienen scope de bloque no de DOM (solo funciona para el bloque a usar)*/
+/* Sass Permite operaciones aritmeticas , CSS tiene la función calc()*/
+/* Sass: Pueden ser interpoladas(Se pueden usar variables como selector), CSS no*/
+/* Sass: No se pueden redefinir, CSS si*/
+
+*, *::before , * ::after {
+    box-sizing: border-box;
+}
+     
+:root{
+    --bar-color: red;
+    --width:0;
+}
+
+body::before{
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--bar-color);
+
+ /*Para calcular la barra */
+    width: calc(var(--width)*1vw);
+}
